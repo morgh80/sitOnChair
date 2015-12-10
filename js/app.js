@@ -8,7 +8,6 @@ $(document).ready(function(){
     var chairFabricPrice = 0;
     var transportPrice = 0;
     var transportPriceBox = $("#transport-price").eq(0).children().first();
-    var currentVisibleList = null;
 
     dropdownButton.on("click", function(){
         $(this).parent().next().toggle(100);
@@ -35,7 +34,6 @@ $(document).ready(function(){
         $("#color-price").html(chairColorPrice);
         var sum = chairPrice + chairFabricPrice + chairColorPrice + transportPrice;
         $("#chair-sum").html(sum);
-        currentVisibleList = $(this);
         $(this).parent().parent().prev().children().first().html(chairColor);
         $(this).parent().parent().prev().children().first().css("color","black");
         $(this).parent().parent().hide(100);
@@ -48,7 +46,6 @@ $(document).ready(function(){
         $("#fabric-price").html(chairFabricPrice);
         var sum = chairPrice + chairFabricPrice + chairColorPrice + transportPrice;
         $("#chair-sum").html(sum);
-        currentVisibleList = $(this);
         $(this).parent().parent().prev().children().first().html(chairFabric);
         $(this).parent().parent().prev().children().first().css("color","black");
         $(this).parent().parent().hide(100);
@@ -70,4 +67,3 @@ $(document).ready(function(){
     });
 
 });
-
